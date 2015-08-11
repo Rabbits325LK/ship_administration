@@ -1,0 +1,728 @@
+[INFO][2015-08-11 15:43:50,900][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2015-08-11 15:43:51,694][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO][2015-08-11 15:43:51,697][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[INFO][2015-08-11 15:43:51,889][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2015-08-11 15:43:52,094][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@5c1becb3: startup date [Tue Aug 11 15:43:52 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 15:43:52,513][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2015-08-11 15:43:52,536][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO][2015-08-11 15:43:52,734][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7edfb412: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,userInfoDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2015-08-11 15:43:53,788][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-08-11 15:43:54,195][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-08-11 15:43:54,859][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2015-08-11 15:43:54,875][org.hibernate.Version]HHH000412: Hibernate Core {4.2.5.Final}
+[INFO][2015-08-11 15:43:54,886][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-08-11 15:43:54,887][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-08-11 15:43:55,783][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-08-11 15:43:56,166][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-08-11 15:43:56,180][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-08-11 15:43:56,958][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-08-11 15:43:56,959][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-08-11 15:43:56,972][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-08-11 15:43:57,007][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.news_info
+[INFO][2015-08-11 15:43:57,007][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [news_images, user_id, news_code, news_state, news_context, news_title]
+[INFO][2015-08-11 15:43:57,008][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 15:43:57,008][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 15:43:57,023][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.role_info
+[INFO][2015-08-11 15:43:57,023][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [role_id, role_name]
+[INFO][2015-08-11 15:43:57,023][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 15:43:57,023][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 15:43:57,037][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_info
+[INFO][2015-08-11 15:43:57,037][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_images, ship_capacity, ship_id, ship_name, ship_size]
+[INFO][2015-08-11 15:43:57,037][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 15:43:57,037][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 15:43:57,053][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_operation
+[INFO][2015-08-11 15:43:57,053][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [endtime, stratime, ship_id, ship_operation_code, user_id, ship_state]
+[INFO][2015-08-11 15:43:57,053][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 15:43:57,053][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 15:43:57,088][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_type
+[INFO][2015-08-11 15:43:57,088][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_type_name]
+[INFO][2015-08-11 15:43:57,088][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 15:43:57,088][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 15:43:57,104][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.user_info
+[INFO][2015-08-11 15:43:57,105][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [nick_name, user_name, phone, role_id, user_images, email, address, tel, user_id, qq]
+[INFO][2015-08-11 15:43:57,105][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 15:43:57,105][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 15:43:57,132][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-08-11 15:43:57,515][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-08-11 15:43:53",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:2013922210, ConnectTime:"2015-08-11 15:43:55", UseCount:2, LastActiveTime:"2015-08-11 15:43:57"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-08-11 15:43:57,946][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@295b89f9]; rollback [true]
+[INFO][2015-08-11 15:43:58,653][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@3943e3c4 testClass = DaoTest, testInstance = org.ship.test.DaoTest@181e763b, testMethod = testUserInfoQueryAll@DaoTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@77e427db testClass = DaoTest, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2015-08-11 15:43:58,685][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@5c1becb3: startup date [Tue Aug 11 15:43:52 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 15:43:58,686][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7edfb412: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,userInfoDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2015-08-11 15:43:58,742][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-08-11 15:44:19,543][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2015-08-11 15:44:19,784][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO][2015-08-11 15:44:19,788][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[INFO][2015-08-11 15:44:19,842][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2015-08-11 15:44:19,954][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@527308ce: startup date [Tue Aug 11 15:44:19 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 15:44:20,127][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2015-08-11 15:44:20,135][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO][2015-08-11 15:44:20,174][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a4993d4: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,userInfoDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2015-08-11 15:44:20,619][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-08-11 15:44:20,800][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-08-11 15:44:21,238][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2015-08-11 15:44:21,244][org.hibernate.Version]HHH000412: Hibernate Core {4.2.5.Final}
+[INFO][2015-08-11 15:44:21,246][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-08-11 15:44:21,248][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-08-11 15:44:21,702][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-08-11 15:44:21,871][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-08-11 15:44:21,876][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-08-11 15:44:22,081][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-08-11 15:44:22,081][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-08-11 15:44:22,085][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-08-11 15:44:22,112][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.news_info
+[INFO][2015-08-11 15:44:22,112][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [news_images, user_id, news_code, news_state, news_context, news_title]
+[INFO][2015-08-11 15:44:22,112][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 15:44:22,112][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 15:44:22,125][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.role_info
+[INFO][2015-08-11 15:44:22,125][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [role_id, role_name]
+[INFO][2015-08-11 15:44:22,125][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 15:44:22,125][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 15:44:22,138][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_info
+[INFO][2015-08-11 15:44:22,138][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_images, ship_capacity, ship_id, ship_name, ship_size]
+[INFO][2015-08-11 15:44:22,138][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 15:44:22,138][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 15:44:22,151][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_operation
+[INFO][2015-08-11 15:44:22,151][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [endtime, stratime, ship_id, ship_operation_code, user_id, ship_state]
+[INFO][2015-08-11 15:44:22,151][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 15:44:22,151][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 15:44:22,169][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_type
+[INFO][2015-08-11 15:44:22,169][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_type_name]
+[INFO][2015-08-11 15:44:22,169][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 15:44:22,169][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 15:44:22,185][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.user_info
+[INFO][2015-08-11 15:44:22,185][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [nick_name, user_name, phone, role_id, user_images, email, address, tel, user_id, qq]
+[INFO][2015-08-11 15:44:22,185][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 15:44:22,185][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 15:44:22,186][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-08-11 15:44:22,282][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-08-11 15:44:20",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1478965327, ConnectTime:"2015-08-11 15:44:21", UseCount:2, LastActiveTime:"2015-08-11 15:44:22"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-08-11 15:44:22,345][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@527308ce: startup date [Tue Aug 11 15:44:19 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 15:44:22,346][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a4993d4: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,userInfoDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2015-08-11 15:44:22,354][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-08-11 16:09:00,608][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2015-08-11 16:09:00,832][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO][2015-08-11 16:09:00,836][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[INFO][2015-08-11 16:09:00,932][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2015-08-11 16:09:01,038][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@29d0eefb: startup date [Tue Aug 11 16:09:01 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:09:01,202][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2015-08-11 16:09:01,210][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO][2015-08-11 16:09:01,253][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@702e959d: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2015-08-11 16:09:01,607][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-08-11 16:09:01,727][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-08-11 16:09:02,067][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2015-08-11 16:09:02,072][org.hibernate.Version]HHH000412: Hibernate Core {4.2.5.Final}
+[INFO][2015-08-11 16:09:02,074][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-08-11 16:09:02,076][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-08-11 16:09:02,420][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-08-11 16:09:02,572][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-08-11 16:09:02,577][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-08-11 16:09:02,795][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-08-11 16:09:02,796][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-08-11 16:09:02,799][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-08-11 16:09:02,827][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.news_info
+[INFO][2015-08-11 16:09:02,827][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [news_images, user_id, news_code, news_state, news_context, news_title]
+[INFO][2015-08-11 16:09:02,827][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:09:02,827][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:09:02,839][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.role_info
+[INFO][2015-08-11 16:09:02,839][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [role_id, role_name]
+[INFO][2015-08-11 16:09:02,840][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:09:02,840][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:09:02,852][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_info
+[INFO][2015-08-11 16:09:02,853][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_images, ship_capacity, ship_id, ship_name, ship_size]
+[INFO][2015-08-11 16:09:02,853][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:09:02,853][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:09:02,868][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_operation
+[INFO][2015-08-11 16:09:02,868][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [endtime, stratime, ship_id, ship_operation_code, user_id, ship_state]
+[INFO][2015-08-11 16:09:02,868][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:09:02,868][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:09:02,880][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_type
+[INFO][2015-08-11 16:09:02,880][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_type_name]
+[INFO][2015-08-11 16:09:02,880][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:09:02,880][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:09:02,896][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.user_info
+[INFO][2015-08-11 16:09:02,896][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [nick_name, user_name, phone, role_id, user_images, email, address, tel, user_id, qq]
+[INFO][2015-08-11 16:09:02,896][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:09:02,896][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:09:02,897][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-08-11 16:09:03,053][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-08-11 16:09:01",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:514852398, ConnectTime:"2015-08-11 16:09:02", UseCount:2, LastActiveTime:"2015-08-11 16:09:02"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-08-11 16:09:03,121][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@29d0eefb: startup date [Tue Aug 11 16:09:01 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:09:03,122][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@702e959d: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2015-08-11 16:09:03,129][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-08-11 16:10:13,640][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2015-08-11 16:10:13,883][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO][2015-08-11 16:10:13,886][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[INFO][2015-08-11 16:10:13,945][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2015-08-11 16:10:14,050][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@6a3d899a: startup date [Tue Aug 11 16:10:14 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:10:14,208][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2015-08-11 16:10:14,216][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO][2015-08-11 16:10:14,261][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@c013862: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2015-08-11 16:10:14,632][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-08-11 16:10:14,755][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-08-11 16:10:15,086][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2015-08-11 16:10:15,094][org.hibernate.Version]HHH000412: Hibernate Core {4.2.5.Final}
+[INFO][2015-08-11 16:10:15,096][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-08-11 16:10:15,098][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-08-11 16:10:15,461][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-08-11 16:10:15,630][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-08-11 16:10:15,636][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-08-11 16:10:15,842][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-08-11 16:10:15,842][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-08-11 16:10:15,845][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-08-11 16:10:15,908][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.news_info
+[INFO][2015-08-11 16:10:15,908][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [news_images, user_id, news_code, news_state, news_context, news_title]
+[INFO][2015-08-11 16:10:15,908][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:10:15,908][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:10:15,921][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.role_info
+[INFO][2015-08-11 16:10:15,922][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [role_id, role_name]
+[INFO][2015-08-11 16:10:15,922][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:10:15,922][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:10:15,946][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_info
+[INFO][2015-08-11 16:10:15,946][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_images, ship_capacity, ship_id, ship_name, ship_size]
+[INFO][2015-08-11 16:10:15,946][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:10:15,946][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:10:15,971][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_operation
+[INFO][2015-08-11 16:10:15,971][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [endtime, stratime, ship_id, ship_operation_code, user_id, ship_state]
+[INFO][2015-08-11 16:10:15,972][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:10:15,972][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:10:15,987][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_type
+[INFO][2015-08-11 16:10:15,987][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_type_name]
+[INFO][2015-08-11 16:10:15,987][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:10:15,988][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:10:16,007][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.user_info
+[INFO][2015-08-11 16:10:16,007][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [nick_name, user_name, phone, role_id, user_images, email, address, tel, user_id, qq]
+[INFO][2015-08-11 16:10:16,008][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:10:16,008][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:10:16,009][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-08-11 16:10:16,172][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-08-11 16:10:14",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1068933553, ConnectTime:"2015-08-11 16:10:15", UseCount:2, LastActiveTime:"2015-08-11 16:10:16"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-08-11 16:10:16,228][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@6a3d899a: startup date [Tue Aug 11 16:10:14 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:10:16,229][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@c013862: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2015-08-11 16:10:16,236][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-08-11 16:15:13,082][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2015-08-11 16:15:13,330][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO][2015-08-11 16:15:13,334][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[INFO][2015-08-11 16:15:13,439][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2015-08-11 16:15:13,594][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@6a3d899a: startup date [Tue Aug 11 16:15:13 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:15:13,790][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2015-08-11 16:15:13,798][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO][2015-08-11 16:15:13,844][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7cee0b66: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2015-08-11 16:15:14,195][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-08-11 16:15:14,318][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-08-11 16:15:14,665][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2015-08-11 16:15:14,673][org.hibernate.Version]HHH000412: Hibernate Core {4.2.5.Final}
+[INFO][2015-08-11 16:15:14,676][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-08-11 16:15:14,677][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-08-11 16:15:15,048][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-08-11 16:15:15,221][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-08-11 16:15:15,226][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-08-11 16:15:15,436][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-08-11 16:15:15,436][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-08-11 16:15:15,439][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-08-11 16:15:15,531][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.news_info
+[INFO][2015-08-11 16:15:15,532][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [news_images, user_id, news_code, news_state, news_context, news_title]
+[INFO][2015-08-11 16:15:15,532][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:15:15,533][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:15:15,554][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.role_info
+[INFO][2015-08-11 16:15:15,555][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [role_id, role_name]
+[INFO][2015-08-11 16:15:15,555][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:15:15,555][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:15:15,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_info
+[INFO][2015-08-11 16:15:15,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_images, ship_capacity, ship_id, ship_name, ship_size]
+[INFO][2015-08-11 16:15:15,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:15:15,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:15:15,593][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_operation
+[INFO][2015-08-11 16:15:15,593][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [endtime, stratime, ship_id, ship_operation_code, user_id, ship_state]
+[INFO][2015-08-11 16:15:15,593][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:15:15,593][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:15:15,607][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_type
+[INFO][2015-08-11 16:15:15,607][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_type_name]
+[INFO][2015-08-11 16:15:15,607][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:15:15,608][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:15:15,624][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.user_info
+[INFO][2015-08-11 16:15:15,624][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [nick_name, user_name, phone, role_id, user_images, email, address, tel, user_id, qq]
+[INFO][2015-08-11 16:15:15,624][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:15:15,624][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:15:15,625][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-08-11 16:15:15,788][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-08-11 16:15:14",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:566515244, ConnectTime:"2015-08-11 16:15:15", UseCount:2, LastActiveTime:"2015-08-11 16:15:15"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-08-11 16:15:15,842][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@6a3d899a: startup date [Tue Aug 11 16:15:13 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:15:15,843][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7cee0b66: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2015-08-11 16:15:15,851][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-08-11 16:17:00,772][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2015-08-11 16:17:00,994][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO][2015-08-11 16:17:00,999][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[INFO][2015-08-11 16:17:01,081][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2015-08-11 16:17:01,185][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@6b1f05a1: startup date [Tue Aug 11 16:17:01 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:17:01,350][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2015-08-11 16:17:01,358][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO][2015-08-11 16:17:01,404][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@31579177: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2015-08-11 16:17:01,823][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-08-11 16:17:01,951][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-08-11 16:17:02,345][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2015-08-11 16:17:02,352][org.hibernate.Version]HHH000412: Hibernate Core {4.2.5.Final}
+[INFO][2015-08-11 16:17:02,354][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-08-11 16:17:02,356][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-08-11 16:17:02,759][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-08-11 16:17:02,934][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-08-11 16:17:02,939][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-08-11 16:17:03,146][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-08-11 16:17:03,146][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-08-11 16:17:03,150][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-08-11 16:17:03,179][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.news_info
+[INFO][2015-08-11 16:17:03,179][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [news_images, user_id, news_code, news_state, news_context, news_title]
+[INFO][2015-08-11 16:17:03,179][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:17:03,179][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:17:03,192][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.role_info
+[INFO][2015-08-11 16:17:03,192][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [role_id, role_name]
+[INFO][2015-08-11 16:17:03,192][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:17:03,192][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:17:03,205][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_info
+[INFO][2015-08-11 16:17:03,206][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_images, ship_capacity, ship_id, ship_name, ship_size]
+[INFO][2015-08-11 16:17:03,206][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:17:03,206][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:17:03,234][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_operation
+[INFO][2015-08-11 16:17:03,234][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [endtime, stratime, ship_id, ship_operation_code, user_id, ship_state]
+[INFO][2015-08-11 16:17:03,234][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:17:03,234][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:17:03,247][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_type
+[INFO][2015-08-11 16:17:03,247][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_type_name]
+[INFO][2015-08-11 16:17:03,247][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:17:03,247][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:17:03,280][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.user_info
+[INFO][2015-08-11 16:17:03,280][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [nick_name, user_name, phone, role_id, user_images, email, address, tel, user_id, qq]
+[INFO][2015-08-11 16:17:03,280][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:17:03,280][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:17:03,281][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-08-11 16:17:03,433][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-08-11 16:17:01",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:947438666, ConnectTime:"2015-08-11 16:17:02", UseCount:2, LastActiveTime:"2015-08-11 16:17:03"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-08-11 16:17:03,633][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@273bc174]; rollback [true]
+[INFO][2015-08-11 16:17:03,933][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@135db8d testClass = DaoTest, testInstance = org.ship.test.DaoTest@76e10699, testMethod = testUserInfoQueryAll@DaoTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@2f7863c8 testClass = DaoTest, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2015-08-11 16:17:03,938][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@6b1f05a1: startup date [Tue Aug 11 16:17:01 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:17:03,939][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@31579177: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2015-08-11 16:17:03,953][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-08-11 16:18:17,504][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2015-08-11 16:18:17,743][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO][2015-08-11 16:18:17,746][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[INFO][2015-08-11 16:18:17,827][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2015-08-11 16:18:17,924][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@262f4873: startup date [Tue Aug 11 16:18:17 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:18:18,081][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2015-08-11 16:18:18,089][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO][2015-08-11 16:18:18,135][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@13dc01b8: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2015-08-11 16:18:18,596][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-08-11 16:18:18,774][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-08-11 16:18:19,090][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2015-08-11 16:18:19,096][org.hibernate.Version]HHH000412: Hibernate Core {4.2.5.Final}
+[INFO][2015-08-11 16:18:19,098][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-08-11 16:18:19,100][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-08-11 16:18:19,508][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-08-11 16:18:19,687][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-08-11 16:18:19,692][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-08-11 16:18:19,903][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-08-11 16:18:19,904][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-08-11 16:18:19,907][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-08-11 16:18:19,936][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.news_info
+[INFO][2015-08-11 16:18:19,936][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [news_images, user_id, news_code, news_state, news_context, news_title]
+[INFO][2015-08-11 16:18:19,936][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:18:19,936][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:18:19,949][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.role_info
+[INFO][2015-08-11 16:18:19,949][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [role_id, role_name]
+[INFO][2015-08-11 16:18:19,949][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:18:19,949][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:18:19,962][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_info
+[INFO][2015-08-11 16:18:19,963][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_images, ship_capacity, ship_id, ship_name, ship_size]
+[INFO][2015-08-11 16:18:19,963][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:18:19,963][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:18:19,977][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_operation
+[INFO][2015-08-11 16:18:19,978][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [endtime, stratime, ship_id, ship_operation_code, user_id, ship_state]
+[INFO][2015-08-11 16:18:19,978][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:18:19,978][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:18:19,990][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_type
+[INFO][2015-08-11 16:18:19,990][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_type_name]
+[INFO][2015-08-11 16:18:19,990][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:18:19,990][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:18:20,006][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.user_info
+[INFO][2015-08-11 16:18:20,006][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [nick_name, user_name, phone, role_id, user_images, email, address, tel, user_id, qq]
+[INFO][2015-08-11 16:18:20,006][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:18:20,006][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:18:20,007][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-08-11 16:18:20,161][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-08-11 16:18:18",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1987378531, ConnectTime:"2015-08-11 16:18:19", UseCount:2, LastActiveTime:"2015-08-11 16:18:20"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-08-11 16:18:20,215][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@262f4873: startup date [Tue Aug 11 16:18:17 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:18:20,215][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@13dc01b8: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2015-08-11 16:18:20,224][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-08-11 16:22:13,067][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2015-08-11 16:22:13,311][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO][2015-08-11 16:22:13,315][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[INFO][2015-08-11 16:22:13,392][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2015-08-11 16:22:13,497][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@6e1513f3: startup date [Tue Aug 11 16:22:13 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:22:13,659][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2015-08-11 16:22:13,670][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO][2015-08-11 16:22:13,717][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2f8defe: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2015-08-11 16:22:14,086][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-08-11 16:22:14,215][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-08-11 16:22:14,536][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2015-08-11 16:22:14,546][org.hibernate.Version]HHH000412: Hibernate Core {4.2.5.Final}
+[INFO][2015-08-11 16:22:14,548][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-08-11 16:22:14,550][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-08-11 16:22:14,932][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-08-11 16:22:15,122][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-08-11 16:22:15,128][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-08-11 16:22:15,343][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-08-11 16:22:15,343][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-08-11 16:22:15,347][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-08-11 16:22:15,375][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.news_info
+[INFO][2015-08-11 16:22:15,375][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [news_images, user_id, news_code, news_state, news_context, news_title]
+[INFO][2015-08-11 16:22:15,375][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:22:15,375][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:22:15,388][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.role_info
+[INFO][2015-08-11 16:22:15,388][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [role_id, role_name]
+[INFO][2015-08-11 16:22:15,388][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:22:15,388][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:22:15,401][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_info
+[INFO][2015-08-11 16:22:15,401][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_images, ship_capacity, ship_id, ship_name, ship_size]
+[INFO][2015-08-11 16:22:15,401][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:22:15,402][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:22:15,420][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_operation
+[INFO][2015-08-11 16:22:15,420][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [endtime, stratime, ship_id, ship_operation_code, user_id, ship_state]
+[INFO][2015-08-11 16:22:15,420][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:22:15,421][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:22:15,435][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_type
+[INFO][2015-08-11 16:22:15,435][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_type_name]
+[INFO][2015-08-11 16:22:15,435][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:22:15,435][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:22:15,451][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.user_info
+[INFO][2015-08-11 16:22:15,451][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [nick_name, user_name, phone, role_id, user_images, email, address, tel, user_id, qq]
+[INFO][2015-08-11 16:22:15,451][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:22:15,451][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:22:15,452][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-08-11 16:22:15,623][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-08-11 16:22:14",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:819920562, ConnectTime:"2015-08-11 16:22:14", UseCount:2, LastActiveTime:"2015-08-11 16:22:15"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-08-11 16:22:16,064][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@6e1513f3: startup date [Tue Aug 11 16:22:13 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:22:16,065][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2f8defe: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2015-08-11 16:22:16,080][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-08-11 16:27:09,550][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2015-08-11 16:27:09,781][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO][2015-08-11 16:27:09,786][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[INFO][2015-08-11 16:27:09,886][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2015-08-11 16:27:09,993][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@67b0eb2c: startup date [Tue Aug 11 16:27:09 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:27:10,180][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2015-08-11 16:27:10,189][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO][2015-08-11 16:27:10,230][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1feb551: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2015-08-11 16:27:10,604][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-08-11 16:27:10,731][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-08-11 16:27:11,090][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2015-08-11 16:27:11,098][org.hibernate.Version]HHH000412: Hibernate Core {4.2.5.Final}
+[INFO][2015-08-11 16:27:11,102][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-08-11 16:27:11,105][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-08-11 16:27:11,528][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-08-11 16:27:11,703][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-08-11 16:27:11,708][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-08-11 16:27:11,916][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-08-11 16:27:11,917][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-08-11 16:27:11,920][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-08-11 16:27:11,949][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.news_info
+[INFO][2015-08-11 16:27:11,949][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [news_images, user_id, news_code, news_state, news_context, news_title]
+[INFO][2015-08-11 16:27:11,949][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:27:11,949][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:27:11,962][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.role_info
+[INFO][2015-08-11 16:27:11,962][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [role_id, role_name]
+[INFO][2015-08-11 16:27:11,962][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:27:11,962][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:27:11,975][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_info
+[INFO][2015-08-11 16:27:11,975][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_images, ship_capacity, ship_id, ship_name, ship_size]
+[INFO][2015-08-11 16:27:11,975][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:27:11,975][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:27:11,999][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_operation
+[INFO][2015-08-11 16:27:12,000][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [endtime, stratime, ship_id, ship_operation_code, user_id, ship_state]
+[INFO][2015-08-11 16:27:12,000][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:27:12,000][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:27:12,016][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_type
+[INFO][2015-08-11 16:27:12,016][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_code, ship_type_name]
+[INFO][2015-08-11 16:27:12,016][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:27:12,016][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:27:12,035][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.user_info
+[INFO][2015-08-11 16:27:12,035][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [nick_name, user_name, phone, role_id, user_images, email, address, tel, user_id, qq]
+[INFO][2015-08-11 16:27:12,035][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 16:27:12,035][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 16:27:12,037][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-08-11 16:27:12,301][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-08-11 16:27:10",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:234484931, ConnectTime:"2015-08-11 16:27:11", UseCount:2, LastActiveTime:"2015-08-11 16:27:12"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-08-11 16:27:12,835][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@67b0eb2c: startup date [Tue Aug 11 16:27:09 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 16:27:12,836][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1feb551: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2015-08-11 16:27:12,844][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-08-11 19:53:58,520][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2015-08-11 19:53:58,724][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO][2015-08-11 19:53:58,726][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[INFO][2015-08-11 19:53:58,777][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2015-08-11 19:53:58,875][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@29774679: startup date [Tue Aug 11 19:53:58 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 19:53:59,044][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2015-08-11 19:53:59,050][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO][2015-08-11 19:53:59,076][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@14ec4505: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,shipOperationService,shipTypeService,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2015-08-11 19:53:59,338][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-08-11 19:53:59,482][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-08-11 19:53:59,704][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2015-08-11 19:53:59,709][org.hibernate.Version]HHH000412: Hibernate Core {4.2.5.Final}
+[INFO][2015-08-11 19:53:59,711][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-08-11 19:53:59,713][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-08-11 19:54:00,202][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-08-11 19:54:00,324][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-08-11 19:54:00,337][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-08-11 19:54:00,499][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-08-11 19:54:00,499][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-08-11 19:54:00,502][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-08-11 19:54:00,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.news_info
+[INFO][2015-08-11 19:54:00,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [news_code, news_context, user_id, news_title, news_images, news_state]
+[INFO][2015-08-11 19:54:00,545][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:54:00,546][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:54:00,571][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.role_info
+[INFO][2015-08-11 19:54:00,571][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [role_name, role_id]
+[INFO][2015-08-11 19:54:00,571][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:54:00,571][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:54:00,596][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_info
+[INFO][2015-08-11 19:54:00,596][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_size, ship_type_code, ship_images, ship_name, ship_capacity, ship_id]
+[INFO][2015-08-11 19:54:00,596][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:54:00,596][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:54:00,623][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_operation
+[INFO][2015-08-11 19:54:00,624][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [stratime, user_id, ship_state, endtime, ship_operation_code, ship_id]
+[INFO][2015-08-11 19:54:00,624][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:54:00,624][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:54:00,646][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_type
+[INFO][2015-08-11 19:54:00,646][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_name, ship_type_code]
+[INFO][2015-08-11 19:54:00,647][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:54:00,647][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:54:00,678][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.user_info
+[INFO][2015-08-11 19:54:00,678][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [qq, address, user_id, role_id, phone, user_name, nick_name, tel, email, user_images]
+[INFO][2015-08-11 19:54:00,678][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:54:00,679][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:54:00,680][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-08-11 19:54:00,793][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-08-11 19:53:59",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1709578324, ConnectTime:"2015-08-11 19:54:00", UseCount:2, LastActiveTime:"2015-08-11 19:54:00"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-08-11 19:54:01,038][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1c25b8a7]; rollback [true]
+[INFO][2015-08-11 19:54:01,344][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@20d11153 testClass = DaoTest, testInstance = org.ship.test.DaoTest@3887cf88, testMethod = testUserInfoQueryAll@DaoTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5649ec46 testClass = DaoTest, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2015-08-11 19:54:01,391][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@29774679: startup date [Tue Aug 11 19:53:58 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 19:54:01,391][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@14ec4505: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,shipOperationService,shipTypeService,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2015-08-11 19:54:01,397][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-08-11 19:54:53,716][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2015-08-11 19:54:53,892][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO][2015-08-11 19:54:53,894][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[INFO][2015-08-11 19:54:53,955][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2015-08-11 19:54:54,023][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@17550481: startup date [Tue Aug 11 19:54:54 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 19:54:54,142][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2015-08-11 19:54:54,147][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO][2015-08-11 19:54:54,180][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@59717824: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,shipOperationService,shipTypeService,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2015-08-11 19:54:54,404][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-08-11 19:54:54,500][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-08-11 19:54:54,687][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2015-08-11 19:54:54,691][org.hibernate.Version]HHH000412: Hibernate Core {4.2.5.Final}
+[INFO][2015-08-11 19:54:54,692][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-08-11 19:54:54,694][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-08-11 19:54:55,093][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-08-11 19:54:55,202][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-08-11 19:54:55,208][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-08-11 19:54:55,372][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-08-11 19:54:55,373][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-08-11 19:54:55,376][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-08-11 19:54:55,414][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.news_info
+[INFO][2015-08-11 19:54:55,414][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [news_code, news_context, user_id, news_title, news_images, news_state]
+[INFO][2015-08-11 19:54:55,414][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:54:55,415][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:54:55,439][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.role_info
+[INFO][2015-08-11 19:54:55,439][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [role_name, role_id]
+[INFO][2015-08-11 19:54:55,439][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:54:55,439][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:54:55,466][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_info
+[INFO][2015-08-11 19:54:55,466][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_size, ship_type_code, ship_images, ship_name, ship_capacity, ship_id]
+[INFO][2015-08-11 19:54:55,466][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:54:55,466][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:54:55,490][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_operation
+[INFO][2015-08-11 19:54:55,490][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [stratime, user_id, ship_state, endtime, ship_operation_code, ship_id]
+[INFO][2015-08-11 19:54:55,491][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:54:55,491][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:54:55,516][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_type
+[INFO][2015-08-11 19:54:55,517][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_name, ship_type_code]
+[INFO][2015-08-11 19:54:55,517][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:54:55,517][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:54:55,541][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.user_info
+[INFO][2015-08-11 19:54:55,542][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [qq, address, user_id, role_id, phone, user_name, nick_name, tel, email, user_images]
+[INFO][2015-08-11 19:54:55,542][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:54:55,542][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:54:55,543][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-08-11 19:54:55,655][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-08-11 19:54:54",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1632789609, ConnectTime:"2015-08-11 19:54:55", UseCount:2, LastActiveTime:"2015-08-11 19:54:55"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-08-11 19:54:56,050][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@17550481: startup date [Tue Aug 11 19:54:54 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 19:54:56,051][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@59717824: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,shipOperationService,shipTypeService,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2015-08-11 19:54:56,065][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-08-11 19:55:06,194][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2015-08-11 19:55:06,347][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[INFO][2015-08-11 19:55:06,349][org.springframework.context.annotation.ClassPathBeanDefinitionScanner]JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[INFO][2015-08-11 19:55:06,406][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2015-08-11 19:55:06,482][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@60addb54: startup date [Tue Aug 11 19:55:06 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 19:55:06,597][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[INFO][2015-08-11 19:55:06,602][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO][2015-08-11 19:55:06,632][org.springframework.beans.factory.support.DefaultListableBeanFactory]Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1e9e725a: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,shipOperationService,shipTypeService,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[ERROR][2015-08-11 19:55:06,871][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-08-11 19:55:06,963][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-08-11 19:55:07,160][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[INFO][2015-08-11 19:55:07,164][org.hibernate.Version]HHH000412: Hibernate Core {4.2.5.Final}
+[INFO][2015-08-11 19:55:07,166][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-08-11 19:55:07,167][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-08-11 19:55:07,611][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-08-11 19:55:07,725][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-08-11 19:55:07,730][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-08-11 19:55:07,895][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-08-11 19:55:07,895][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-08-11 19:55:07,900][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-08-11 19:55:07,944][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.news_info
+[INFO][2015-08-11 19:55:07,944][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [news_code, news_context, user_id, news_title, news_images, news_state]
+[INFO][2015-08-11 19:55:07,944][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:55:07,945][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:55:07,968][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.role_info
+[INFO][2015-08-11 19:55:07,969][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [role_name, role_id]
+[INFO][2015-08-11 19:55:07,969][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:55:07,969][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:55:07,994][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_info
+[INFO][2015-08-11 19:55:07,994][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_size, ship_type_code, ship_images, ship_name, ship_capacity, ship_id]
+[INFO][2015-08-11 19:55:07,994][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:55:07,994][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:55:08,019][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_operation
+[INFO][2015-08-11 19:55:08,020][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [stratime, user_id, ship_state, endtime, ship_operation_code, ship_id]
+[INFO][2015-08-11 19:55:08,020][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:55:08,020][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:55:08,045][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.ship_type
+[INFO][2015-08-11 19:55:08,045][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [ship_type_name, ship_type_code]
+[INFO][2015-08-11 19:55:08,045][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:55:08,045][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:55:08,069][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: ship_administration.user_info
+[INFO][2015-08-11 19:55:08,070][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [qq, address, user_id, role_id, phone, user_name, nick_name, tel, email, user_images]
+[INFO][2015-08-11 19:55:08,070][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-08-11 19:55:08,070][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-08-11 19:55:08,071][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-08-11 19:55:08,225][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-08-11 19:55:06",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:659059448, ConnectTime:"2015-08-11 19:55:07", UseCount:2, LastActiveTime:"2015-08-11 19:55:08"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-08-11 19:55:08,487][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Began transaction (1): transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1494b84d]; rollback [true]
+[INFO][2015-08-11 19:55:08,832][org.springframework.test.context.transaction.TransactionalTestExecutionListener]Rolled back transaction after test execution for test context [TestContext@4c9e9fb8 testClass = DaoTest, testInstance = org.ship.test.DaoTest@9ec531, testMethod = testUserInfoQueryAll@DaoTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@40147317 testClass = DaoTest, locations = '{classpath:spring.xml, classpath:spring-hibernate.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+[INFO][2015-08-11 19:55:08,836][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@60addb54: startup date [Tue Aug 11 19:55:06 CST 2015]; root of context hierarchy
+[INFO][2015-08-11 19:55:08,837][org.springframework.beans.factory.support.DefaultListableBeanFactory]Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1e9e725a: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDao,newsInfoDao,roleInfoDao,shipInfoDao,shipOperationDao,shipTypeDao,userInfoDao,shipOperationService,shipTypeService,userInfoService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[INFO][2015-08-11 19:55:08,844][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
