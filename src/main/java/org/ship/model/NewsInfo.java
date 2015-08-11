@@ -14,14 +14,18 @@ import javax.persistence.Table;
 @Table(name = "news_info", catalog = "ship_administration")
 public class NewsInfo implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final Long serialVersionUID = 1L;
 	// Fields
 
-	private Integer newsCode;
+	private Long newsCode;
 	private String newsTitle;
 	private String newsContext;
 	private String newsImages;
-	private Integer newsState;
-	private Integer userId;
+	private Long newsState;
+	private Long userId;
 
 	// Constructors
 
@@ -30,7 +34,7 @@ public class NewsInfo implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public NewsInfo(String newsTitle, Integer newsState, Integer userId) {
+	public NewsInfo(String newsTitle, Long newsState, Long userId) {
 		this.newsTitle = newsTitle;
 		this.newsState = newsState;
 		this.userId = userId;
@@ -38,7 +42,7 @@ public class NewsInfo implements java.io.Serializable {
 
 	/** full constructor */
 	public NewsInfo(String newsTitle, String newsContext, String newsImages,
-			Integer newsState, Integer userId) {
+			Long newsState, Long userId) {
 		this.newsTitle = newsTitle;
 		this.newsContext = newsContext;
 		this.newsImages = newsImages;
@@ -50,11 +54,11 @@ public class NewsInfo implements java.io.Serializable {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "news_code", unique = true, nullable = false)
-	public Integer getNewsCode() {
+	public Long getNewsCode() {
 		return this.newsCode;
 	}
 
-	public void setNewsCode(Integer newsCode) {
+	public void setNewsCode(Long newsCode) {
 		this.newsCode = newsCode;
 	}
 
@@ -86,20 +90,20 @@ public class NewsInfo implements java.io.Serializable {
 	}
 
 	@Column(name = "news_state", nullable = false)
-	public Integer getNewsState() {
+	public Long getNewsState() {
 		return this.newsState;
 	}
 
-	public void setNewsState(Integer newsState) {
+	public void setNewsState(Long newsState) {
 		this.newsState = newsState;
 	}
 
 	@Column(name = "user_id", nullable = false)
-	public Integer getUserId() {
+	public Long getUserId() {
 		return this.userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 

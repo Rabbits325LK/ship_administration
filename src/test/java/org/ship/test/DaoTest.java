@@ -26,6 +26,11 @@ public class DaoTest {
 	private IUserInfoDao userInfoDao;
 	
 	@Test
+	public void testSay(){
+		System.out.println("the DaoTest");
+	}
+	
+	//@Test
 	public void testUserInfoQueryAll(){
 		List<UserInfo> users = userInfoDao.getListByHQL("from UserInfo order by userId");
 		for(UserInfo user : users){

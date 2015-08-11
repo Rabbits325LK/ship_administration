@@ -69,4 +69,10 @@ public class UserInfoServiceImpl implements IUserInfoService {
 		return userInfoDao.getByHQL("from UserInfo where userName=?", userName);
 	}
 
+	@Override
+	public UserInfo queryById(long userId) {
+		// TODO Auto-generated method stub
+		return userInfoDao.get(userId);
+	}
+
 }

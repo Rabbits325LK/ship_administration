@@ -19,7 +19,18 @@ public class ServiceTest {
 	@Resource
 	private IUserInfoService userInfoService;
 	
-	@Test
+	//@Test
+	public void testSay(){
+		System.out.println("the ServiceTest");
+	}
+	
+	//@Test
+	public void userInfo_queryById(){
+		UserInfo user = userInfoService.queryById((long)1);
+		System.out.println(user.getNickName());
+	}
+	
+	//@Test
 	public void userInfo_queryByAll(){
 		List<UserInfo> users = userInfoService.qeuryAll();
 		for(UserInfo user : users ){
@@ -28,7 +39,7 @@ public class ServiceTest {
 	}
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	//@Test
+	@Test
 	public void userInfo_findByPage(){
 		PageResults page = new PageResults();
 		List<UserInfo> users = userInfoService.findByPage(page.getPageNo()).getResults();

@@ -7,6 +7,7 @@ import org.ship.util.PageResults;
 
 public interface IUserInfoService {
 	
+	public UserInfo queryById(long userId);
 	/**
 	 * queryAll
 	 * @return List<UserInfo>

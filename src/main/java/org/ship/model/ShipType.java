@@ -16,7 +16,11 @@ public class ShipType implements java.io.Serializable {
 
 	// Fields
 
-	private Integer shipTypeCode;
+	/**
+	 * 
+	 */
+	private static final Long serialVersionUID = 1L;
+	private Long shipTypeCode;
 	private String shipTypeName;
 
 	// Constructors
@@ -34,11 +38,11 @@ public class ShipType implements java.io.Serializable {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ship_type_code", unique = true, nullable = false)
-	public Integer getShipTypeCode() {
+	public Long getShipTypeCode() {
 		return this.shipTypeCode;
 	}
 
-	public void setShipTypeCode(Integer shipTypeCode) {
+	public void setShipTypeCode(Long shipTypeCode) {
 		this.shipTypeCode = shipTypeCode;
 	}
 

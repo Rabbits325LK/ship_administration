@@ -19,10 +19,14 @@ public class ShipOperation implements java.io.Serializable {
 
 	// Fields
 
-	private Integer shipOperationCode;
-	private Integer shipId;
-	private Integer userId;
-	private Integer shipState;
+	/**
+	 * 
+	 */
+	private static final Long serialVersionUID = 1L;
+	private Long shipOperationCode;
+	private Long shipId;
+	private Long userId;
+	private Long shipState;
 	private Date stratime;
 	private Date endtime;
 
@@ -33,14 +37,14 @@ public class ShipOperation implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public ShipOperation(Integer shipId, Integer userId, Integer shipState) {
+	public ShipOperation(Long shipId, Long userId, Long shipState) {
 		this.shipId = shipId;
 		this.userId = userId;
 		this.shipState = shipState;
 	}
 
 	/** full constructor */
-	public ShipOperation(Integer shipId, Integer userId, Integer shipState,
+	public ShipOperation(Long shipId, Long userId, Long shipState,
 			Date stratime, Date endtime) {
 		this.shipId = shipId;
 		this.userId = userId;
@@ -53,38 +57,38 @@ public class ShipOperation implements java.io.Serializable {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ship_operation_code", unique = true, nullable = false)
-	public Integer getShipOperationCode() {
+	public Long getShipOperationCode() {
 		return this.shipOperationCode;
 	}
 
-	public void setShipOperationCode(Integer shipOperationCode) {
+	public void setShipOperationCode(Long shipOperationCode) {
 		this.shipOperationCode = shipOperationCode;
 	}
 
 	@Column(name = "ship_id", nullable = false)
-	public Integer getShipId() {
+	public Long getShipId() {
 		return this.shipId;
 	}
 
-	public void setShipId(Integer shipId) {
+	public void setShipId(Long shipId) {
 		this.shipId = shipId;
 	}
 
 	@Column(name = "user_id", nullable = false)
-	public Integer getUserId() {
+	public Long getUserId() {
 		return this.userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
 	@Column(name = "ship_state", nullable = false)
-	public Integer getShipState() {
+	public Long getShipState() {
 		return this.shipState;
 	}
 
-	public void setShipState(Integer shipState) {
+	public void setShipState(Long shipState) {
 		this.shipState = shipState;
 	}
 
