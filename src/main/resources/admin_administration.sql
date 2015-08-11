@@ -56,8 +56,8 @@ ship_operation_code int(11) not null primary key auto_increment,
 ship_id int(11) not null,
 user_id int(11) not null,
 ship_state int(11) not null,
-stratime date,
-endtime date);
+stratime timestamp,
+endtime timestamp);
 --SHIP_OPERATION END--
 --NEWS_INFO(TABLE)--
 create table news_info(

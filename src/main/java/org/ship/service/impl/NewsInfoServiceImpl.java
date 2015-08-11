@@ -1,13 +1,13 @@
 package org.ship.service.impl;
 
 import javax.annotation.Resource;
-import javax.transaction.Transactional;
 
 import org.ship.dao.INewsInfoDao;
 import org.ship.model.NewsInfo;
 import org.ship.service.INewsInfoService;
 import org.ship.util.PageResults;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 @Service("newsInfoService")

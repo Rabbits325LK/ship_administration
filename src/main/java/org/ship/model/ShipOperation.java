@@ -1,10 +1,14 @@
 package org.ship.model;
 
+import java.sql.Timestamp;
 import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+
 import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -19,12 +23,19 @@ public class ShipOperation implements java.io.Serializable {
 
 	// Fields
 
-	private Integer shipOperationCode;
-	private Integer shipId;
-	private Integer userId;
-	private Integer shipState;
-	private Date stratime;
-	private Date endtime;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4671926061235135605L;
+	/**
+	 * 
+	 */
+	private Long shipOperationCode;
+	private Long shipId;
+	private Long userId;
+	private Long shipState;
+	private Timestamp stratime;
+	private Timestamp endtime;
 
 	// Constructors
 
@@ -33,15 +44,15 @@ public class ShipOperation implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public ShipOperation(Integer shipId, Integer userId, Integer shipState) {
+	public ShipOperation(Long shipId, Long userId, Long shipState) {
 		this.shipId = shipId;
 		this.userId = userId;
 		this.shipState = shipState;
 	}
 
 	/** full constructor */
-	public ShipOperation(Integer shipId, Integer userId, Integer shipState,
-			Date stratime, Date endtime) {
+	public ShipOperation(Long shipId, Long userId, Long shipState,
+			Timestamp stratime, Timestamp endtime) {
 		this.shipId = shipId;
 		this.userId = userId;
 		this.shipState = shipState;
@@ -53,38 +64,38 @@ public class ShipOperation implements java.io.Serializable {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ship_operation_code", unique = true, nullable = false)
-	public Integer getShipOperationCode() {
+	public Long getShipOperationCode() {
 		return this.shipOperationCode;
 	}
 
-	public void setShipOperationCode(Integer shipOperationCode) {
+	public void setShipOperationCode(Long shipOperationCode) {
 		this.shipOperationCode = shipOperationCode;
 	}
 
 	@Column(name = "ship_id", nullable = false)
-	public Integer getShipId() {
+	public Long getShipId() {
 		return this.shipId;
 	}
 
-	public void setShipId(Integer shipId) {
+	public void setShipId(Long shipId) {
 		this.shipId = shipId;
 	}
 
 	@Column(name = "user_id", nullable = false)
-	public Integer getUserId() {
+	public Long getUserId() {
 		return this.userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
 	@Column(name = "ship_state", nullable = false)
-	public Integer getShipState() {
+	public Long getShipState() {
 		return this.shipState;
 	}
 
-	public void setShipState(Integer shipState) {
+	public void setShipState(Long shipState) {
 		this.shipState = shipState;
 	}
 
@@ -94,7 +105,7 @@ public class ShipOperation implements java.io.Serializable {
 		return this.stratime;
 	}
 
-	public void setStratime(Date stratime) {
+	public void setStratime(Timestamp stratime) {
 		this.stratime = stratime;
 	}
 
@@ -104,7 +115,7 @@ public class ShipOperation implements java.io.Serializable {
 		return this.endtime;
 	}
 
-	public void setEndtime(Date endtime) {
+	public void setEndtime(Timestamp endtime) {
 		this.endtime = endtime;
 	}
 

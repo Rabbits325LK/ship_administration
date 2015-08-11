@@ -16,8 +16,15 @@ public class UserInfo implements java.io.Serializable {
 
 	// Fields
 
-	private Integer userId;
-	private Integer roleId;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6626496746680570224L;
+	/**
+	 * 
+	 */
+	private Long userId;
+	private Long roleId;
 	private String userName;
 	private String nickName;
 	private String address;
@@ -34,12 +41,12 @@ public class UserInfo implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public UserInfo(Integer roleId) {
+	public UserInfo(Long roleId) {
 		this.roleId = roleId;
 	}
 
 	/** full constructor */
-	public UserInfo(Integer roleId, String userName, String nickName,
+	public UserInfo(Long roleId, String userName, String nickName,
 			String address, String email, String tel, String phone, String qq,
 			String userImages) {
 		this.roleId = roleId;
@@ -57,20 +64,20 @@ public class UserInfo implements java.io.Serializable {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "user_id", unique = true, nullable = false)
-	public Integer getUserId() {
+	public Long getUserId() {
 		return this.userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
 	@Column(name = "role_id", nullable = false)
-	public Integer getRoleId() {
+	public Long getRoleId() {
 		return this.roleId;
 	}
 
-	public void setRoleId(Integer roleId) {
+	public void setRoleId(Long roleId) {
 		this.roleId = roleId;
 	}
 

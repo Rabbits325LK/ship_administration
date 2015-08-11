@@ -3,13 +3,13 @@ package org.ship.service.impl;
 import java.util.List;
 
 import javax.annotation.Resource;
-import javax.transaction.Transactional;
 
 import org.ship.dao.IShipInfoDao;
 import org.ship.model.ShipInfo;
 import org.ship.service.IShipInfoService;
 import org.ship.util.PageResults;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 @Service("shipInfoService")
@@ -60,8 +60,9 @@ public class ShipInfoServiceImpl implements IShipInfoService {
 		shipInfoDao.delete(shipInfo);
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
-	public PageResults<ShipInfo> findByPage(int pageNo) {
+	public PageResults findByPage(int pageNo) {
 		// TODO Auto-generated method stub
 		return shipInfoDao.findPageByFetchedHql("from ShipInfo order by shipId", "select count(*) from ShipInfo",
 				pageNo, 10);

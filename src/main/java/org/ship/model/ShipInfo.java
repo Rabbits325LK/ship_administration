@@ -14,11 +14,18 @@ import javax.persistence.Table;
 @Table(name = "ship_info", catalog = "ship_administration")
 public class ShipInfo implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3042081684784247595L;
 	// Fields
 
-	private Integer shipId;
+	/**
+	 * 
+	 */
+	private Long shipId;
 	private String shipName;
-	private Integer shipTypeCode;
+	private Long shipTypeCode;
 	private String shipSize;
 	private String shipCapacity;
 	private String shipImages;
@@ -30,13 +37,13 @@ public class ShipInfo implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public ShipInfo(String shipName, Integer shipTypeCode) {
+	public ShipInfo(String shipName, Long shipTypeCode) {
 		this.shipName = shipName;
 		this.shipTypeCode = shipTypeCode;
 	}
 
 	/** full constructor */
-	public ShipInfo(String shipName, Integer shipTypeCode, String shipSize,
+	public ShipInfo(String shipName, Long shipTypeCode, String shipSize,
 			String shipCapacity, String shipImages) {
 		this.shipName = shipName;
 		this.shipTypeCode = shipTypeCode;
@@ -49,11 +56,11 @@ public class ShipInfo implements java.io.Serializable {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "ship_id", unique = true, nullable = false)
-	public Integer getShipId() {
+	public Long getShipId() {
 		return this.shipId;
 	}
 
-	public void setShipId(Integer shipId) {
+	public void setShipId(Long shipId) {
 		this.shipId = shipId;
 	}
 
@@ -67,11 +74,11 @@ public class ShipInfo implements java.io.Serializable {
 	}
 
 	@Column(name = "ship_type_code", nullable = false)
-	public Integer getShipTypeCode() {
+	public Long getShipTypeCode() {
 		return this.shipTypeCode;
 	}
 
-	public void setShipTypeCode(Integer shipTypeCode) {
+	public void setShipTypeCode(Long shipTypeCode) {
 		this.shipTypeCode = shipTypeCode;
 	}
 

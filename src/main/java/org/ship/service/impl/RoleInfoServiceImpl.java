@@ -3,12 +3,12 @@ package org.ship.service.impl;
 import java.util.List;
 
 import javax.annotation.Resource;
-import javax.transaction.Transactional;
 
 import org.ship.dao.IRoleInfoDao;
 import org.ship.model.RoleInfo;
 import org.ship.service.IRoleInfoService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 @Service("roleInfoService")

@@ -42,5 +42,6 @@ public interface IShipInfoService {
 	/**
 	 * 分页查询
 	 */
-	public PageResults<ShipInfo> findByPage(int pageNo);
+	@SuppressWarnings("rawtypes")
+	public PageResults findByPage(int pageNo);
 }

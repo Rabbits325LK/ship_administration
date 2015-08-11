@@ -16,7 +16,14 @@ public class RoleInfo implements java.io.Serializable {
 
 	// Fields
 
-	private Integer roleId;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8135629533691186952L;
+	/**
+	 * 
+	 */
+	private Long roleId;
 	private String roleName;
 
 	// Constructors
@@ -34,11 +41,11 @@ public class RoleInfo implements java.io.Serializable {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "role_id", unique = true, nullable = false)
-	public Integer getRoleId() {
+	public Long getRoleId() {
 		return this.roleId;
 	}
 
-	public void setRoleId(Integer roleId) {
+	public void setRoleId(Long roleId) {
 		this.roleId = roleId;
 	}
 
