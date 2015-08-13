@@ -99,8 +99,7 @@ public class ShipOperation implements java.io.Serializable {
 		this.shipState = shipState;
 	}
 
-	@Temporal(TemporalType.DATE)
-	@Column(name = "stratime", length = 10)
+	@Column(name = "stratime", nullable = false, length = 19)
 	public Date getStratime() {
 		return this.stratime;
 	}
@@ -109,8 +108,7 @@ public class ShipOperation implements java.io.Serializable {
 		this.stratime = stratime;
 	}
 
-	@Temporal(TemporalType.DATE)
-	@Column(name = "endtime", length = 10)
+	@Column(name = "endtime", nullable = false, length = 19)
 	public Date getEndtime() {
 		return this.endtime;
 	}

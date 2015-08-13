@@ -6,6 +6,8 @@ import org.ship.model.ShipType;
 
 public interface IShipTypeService {
 	
+	public String queryByCodeforName(long shipTypeCode);
+	
 	/**
 	 * queryByCode
 	 * @param shipTypeCode

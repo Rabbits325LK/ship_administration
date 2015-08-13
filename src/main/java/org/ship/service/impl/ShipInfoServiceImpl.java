@@ -68,4 +68,10 @@ public class ShipInfoServiceImpl implements IShipInfoService {
 				pageNo, 10);
 	}
 
+	@Override
+	public Long queryByIdforCount(long shipId) {
+		// TODO Auto-generated method stub
+		return shipInfoDao.countByHql("from ShipInfo where shipId=?", shipId);
+	}
+
 }

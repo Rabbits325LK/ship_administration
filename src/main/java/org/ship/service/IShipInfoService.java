@@ -8,6 +8,12 @@ import org.ship.util.PageResults;
 public interface IShipInfoService {
 	
 	/**
+	 * 通过ID查询是否存在，存在的条数
+	 * @param shipId
+	 * @return
+	 */
+	public Long queryByIdforCount(long shipId);
+	/**
 	 * 查询全部游艇信息
 	 */
 	public List<ShipInfo> queryByAll();

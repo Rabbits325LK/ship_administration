@@ -26,7 +26,10 @@ public class UserInfo implements java.io.Serializable {
 	private Long userId;
 	private Long roleId;
 	private String userName;
+	private String userPwd;
 	private String nickName;
+	private Integer gender;
+	private String userIdcard;
 	private String address;
 	private String email;
 	private String tel;
@@ -46,12 +49,16 @@ public class UserInfo implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public UserInfo(Long roleId, String userName, String nickName,
+	public UserInfo(Long roleId, String userName, String userPwd, String nickName,
+			Integer gender, String userIdcard,
 			String address, String email, String tel, String phone, String qq,
 			String userImages) {
 		this.roleId = roleId;
 		this.userName = userName;
+		this.userPwd = userPwd;
 		this.nickName = nickName;
+		this.gender = gender;
+		this.userIdcard = userIdcard;
 		this.address = address;
 		this.email = email;
 		this.tel = tel;
@@ -60,6 +67,7 @@ public class UserInfo implements java.io.Serializable {
 		this.userImages = userImages;
 	}
 
+	
 	// Property accessors
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -81,7 +89,7 @@ public class UserInfo implements java.io.Serializable {
 		this.roleId = roleId;
 	}
 
-	@Column(name = "user_name", length = 32)
+	@Column(name = "user_name", length = 32, nullable = false)
 	public String getUserName() {
 		return this.userName;
 	}
@@ -90,6 +98,15 @@ public class UserInfo implements java.io.Serializable {
 		this.userName = userName;
 	}
 
+	@Column(name = "user_pwd", length = 64, nullable = false)
+	public String getUserPwd() {
+		return this.userPwd;
+	}
+	
+	public void setUserPwd(String userPwd) {
+		this.userPwd = userPwd;
+	}
+	
 	@Column(name = "nick_name", length = 32)
 	public String getNickName() {
 		return this.nickName;
@@ -97,6 +114,24 @@ public class UserInfo implements java.io.Serializable {
 
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
+	}
+
+	@Column(name = "gender")
+	public Integer getGender() {
+		return gender;
+	}
+
+	public void setGender(Integer gender) {
+		this.gender = gender;
+	}
+
+	@Column(name = "user_idcard")
+	public String getUserIdcard() {
+		return userIdcard;
+	}
+
+	public void setUserIdcard(String userIdcard) {
+		this.userIdcard = userIdcard;
 	}
 
 	@Column(name = "address", length = 128)

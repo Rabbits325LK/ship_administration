@@ -39,12 +39,18 @@ public class ServiceTest {
 	}
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	@Test
+	//@Test
 	public void userInfo_findByPage(){
 		PageResults page = new PageResults();
 		List<UserInfo> users = userInfoService.findByPage(page.getPageNo()).getResults();
 		for(UserInfo user : users){
 			System.out.println(user.getUserName());
 		}
+	}
+	
+	//@Test
+	public void queryByIdforCount(){
+		long count = userInfoService.queryByIdforCount((long)1);
+		System.out.println(count);
 	}
 }

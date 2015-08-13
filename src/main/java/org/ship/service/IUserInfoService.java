@@ -7,6 +7,10 @@ import org.ship.util.PageResults;
 
 public interface IUserInfoService {
 	
+	public Long queryByIdforCount(long userId);
+	
+	public List<UserInfo> queryByRoleId(long roleId);
+	
 	public UserInfo queryById(long userId);
 	/**
 	 * queryAll
@@ -19,9 +23,10 @@ public interface IUserInfoService {
 	 * @param stratPage
 	 * @return PageResults
 	 */
-	@SuppressWarnings("rawtypes")
-	public PageResults findByPage(int stratPage);
+	public PageResults<UserInfo> findByPage(int stratPage);
 	
+	
+	public PageResults<UserInfo> findByPageAndRoleId(int startPage, long roleId);
 	/**
 	 * save
 	 * @param userInfo

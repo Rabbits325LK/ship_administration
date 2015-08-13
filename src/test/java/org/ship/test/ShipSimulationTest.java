@@ -1,5 +1,6 @@
 package org.ship.test;
 
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -8,14 +9,15 @@ import javax.annotation.Resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.ship.dao.impl.ShipOperationDaoImpl;
 import org.ship.model.ShipInfo;
 import org.ship.model.ShipOperation;
 import org.ship.model.ShipType;
-import org.ship.model.UserInfo;
 import org.ship.service.IShipInfoService;
 import org.ship.service.IShipOperationService;
 import org.ship.service.IShipTypeService;
 import org.ship.service.IUserInfoService;
+import org.ship.service.impl.ShipOperationServiceImpl;
 import org.ship.util.PageResults;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -83,7 +85,7 @@ public class ShipSimulationTest {
 	 */
 	// @Test
 	public void queryById() {
-		long shipId = 1;
+		long shipId = 16;
 		ShipInfo ship = shipInfoService.getById(shipId);
 		System.out.println("船名：" + ship.getShipName());
 		System.out.println("尺寸：" + ship.getShipSize());
@@ -104,8 +106,7 @@ public class ShipSimulationTest {
 	 * 
 	 * @throws ParseException
 	 */
-	@SuppressWarnings("static-access")
-	@Test
+	// @Test
 	public void OrderShip() throws ParseException {
 		// 模拟用户 rabbits325
 		// 模拟预订船艇 荣超地产
@@ -117,57 +118,111 @@ public class ShipSimulationTest {
 		long shipState = 1;
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");// 小写的mm表示的是分钟
 		sdf.setLenient(false);
-		 String strat="2015-08-12 08:43:00"; 
-		 String end ="2015-08-12 07:42:00";
-		 
-		//String strat = "2015-08-12 14:45:00";
-		//String end = "2015-08-12 16:45:00";
-		java.sql.Timestamp stratime = new java.sql.Timestamp(System.currentTimeMillis());
-		java.sql.Timestamp endtime = new java.sql.Timestamp(System.currentTimeMillis());
-		stratime.valueOf(strat);
-		endtime.valueOf(end);
-		
-		ShipOperation so = new ShipOperation();
-		so.setUserId(userId);
-		so.setShipId(shipId);
-		so.setShipState(shipState);
-		so.setStratime(stratime);
-		so.setEndtime(endtime);
-		boolean flag = shipOperationService.queryByShipTime(so);
-		System.out.println(flag);
-		if (flag == false) {
-			shipOperationService.save(so);
-			System.out.println("预约成功");
+		String strat = "2015-08-13 14:43:00";
+		String end = "2015-08-13 22:42:00";
+
+		// String strat = "2015-08-12 14:45:00";
+		// String end = "2015-08-12 16:45:00";
+		java.sql.Timestamp stratime = new java.sql.Timestamp(
+				System.currentTimeMillis());
+		java.sql.Timestamp endtime = new java.sql.Timestamp(
+				System.currentTimeMillis());
+		java.sql.Timestamp nowtime = new java.sql.Timestamp(
+				System.currentTimeMillis());
+		stratime = Timestamp.valueOf(strat);
+		endtime = Timestamp.valueOf(end);
+		System.out.println(nowtime);
+		if (nowtime.getTime() > stratime.getTime()) {
+			System.out.println("不能预订过去。。。白痴！");
+		} else if (endtime.getTime() < stratime.getTime()) {
+			System.out.println("结束时间怎么可能比开始时间早，你是猪吗？");
 		} else {
-			System.out.println("该时间段已被预约");
+			ShipOperation so = new ShipOperation();
+			so.setUserId(userId);
+			so.setShipId(shipId);
+			so.setShipState(shipState);
+			so.setStratime(stratime);
+			so.setEndtime(endtime);
+			boolean flag = shipOperationService.queryByShipTime(so);
+			System.out.println(flag);
+			if (flag == false) {
+				// shipOperationService.save(so);
+				System.out.println("预约成功");
+			} else {
+				System.out.println("该时间段已被预约");
+			}
 		}
 	}
 
 	/**
 	 * 模拟管理员查询预订船艇及进行受理操作
 	 */
+	// @Test
+	/*
+	 * public void queryOrderShipInfo() {
+	 *//**
+	 * 模拟查看列表
+	 */
+	/*
+	 * System.out.println("现在管理员进入了游艇预订页面"); PageResults<ShipOperation> page =
+	 * new PageResults<ShipOperation>(); List<ShipOperation> sos =
+	 * shipOperationService.queryOrderShipInfo( page.getPageNo()).getResults();
+	 * for (ShipOperation so : sos) { ShipInfo ship =
+	 * shipInfoService.getById(so.getShipId()); UserInfo user =
+	 * userInfoService.queryById(so.getUserId());
+	 * System.out.println("------------------------------------------");
+	 * System.out.println(user.getUserName() + " 预订的 " + ship.getShipName() +
+	 * "：" + so.getEndtime() + " 到 " + so.getEndtime());
+	 * System.out.println("__________________________________________"); }
+	 *//**
+	 * 模拟受理操作
+	 */
+	/*
+	 * System.out.println("对第一个进行受理操作"); ShipOperation so =
+	 * shipOperationService.getByCode((long) 1);
+	 * shipOperationService.updateStatePass(so); System.out.println("操作完成"); }
+	 */
+
+	/**
+	 * 模拟作废操作
+	 */
+	// @Test
+	public void delOrderShipInfo() {
+		ShipOperation shipOperation = shipOperationService.getByCode((long) 2);
+		shipOperationService.updateStateInvalid(shipOperation);
+	}
+
+	/**
+	 * 模拟已执行操作
+	 */
+	// @Test
+	public void UseOrderShipInfo() {
+		ShipOperation shipOperation = shipOperationService.getByCode((long) 16);
+		shipOperationService.updateStateUse(shipOperation);
+	}
+
+	/**
+	 * 测试 查询预订订单是否存在
+	 */
+	// @Test
+	public void testCodeforStateOrder() {
+		boolean flag = shipOperationService.getByCodeforStateOrder((long) 3);
+		System.out.println(flag);
+	}
+
+	/**
+	 * 测试 查询过期游艇订单
+	 */
 	//@Test
-	public void queryOrderShipInfo() {
-		/**
-		 * 模拟查看列表
-		 */
-		System.out.println("现在管理员进入了游艇预订页面");
-		PageResults<ShipOperation> page = new PageResults<ShipOperation>();
-		List<ShipOperation> sos = shipOperationService.queryOrderShipInfo(
-				page.getPageNo()).getResults();
-		for(ShipOperation so : sos ){
-			ShipInfo ship = shipInfoService.getById(so.getShipId());
-			UserInfo user = userInfoService.queryById(so.getUserId());
-			System.out.println("------------------------------------------");
-			System.out.println(user.getUserName()+" 预订的 "+ship.getShipName()+"："+so.getEndtime()+" 到 "+so.getEndtime());
-			System.out.println("__________________________________________");
+	public void pastOrderShipInfo() {
+		List<ShipOperation> shipOperations = shipOperationService
+				.pastOrderShipInfo();
+		for (ShipOperation shipOperation : shipOperations) {
+			if (null != shipOperation) {
+				System.out.println(shipOperation.getShipId());
+			}else {
+				System.out.println("null");
+			}
 		}
-		/**
-		 * 模拟受理操作
-		 */
-		System.out.println("对第一个进行受理操作");
-		ShipOperation so = shipOperationService.getByCode((long)1);
-		shipOperationService.updateStatePass(so);
-		System.out.println("操作完成");
 	}
 }

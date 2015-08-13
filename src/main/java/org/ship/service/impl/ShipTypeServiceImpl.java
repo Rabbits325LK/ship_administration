@@ -53,4 +53,11 @@ public class ShipTypeServiceImpl implements IShipTypeService{
 		shipTypeDao.delete(shipType);
 	}
 
+	@Override
+	public String queryByCodeforName(long shipTypeCode) {
+		// TODO Auto-generated method stub
+		ShipType shipType = shipTypeDao.getByHQL("from ShipType where shipTypeCode=?", shipTypeCode);
+		return shipType.getShipTypeName();
+	}
+
 }

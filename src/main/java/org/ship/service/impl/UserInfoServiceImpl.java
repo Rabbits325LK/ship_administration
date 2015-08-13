@@ -24,9 +24,8 @@ public class UserInfoServiceImpl implements IUserInfoService {
 		return userInfoDao.getListByHQL("from UserInfo order by userId");
 	}
 
-	@SuppressWarnings("rawtypes")
 	@Override
-	public PageResults findByPage(int stratPage) {
+	public PageResults<UserInfo> findByPage(int stratPage) {
 		// TODO Auto-generated method stub
 		return userInfoDao.findPageByFetchedHql(
 				"from UserInfo order by userId",
@@ -73,6 +72,27 @@ public class UserInfoServiceImpl implements IUserInfoService {
 	public UserInfo queryById(long userId) {
 		// TODO Auto-generated method stub
 		return userInfoDao.get(userId);
+	}
+
+	@Override
+	public Long queryByIdforCount(long userId) {
+		// TODO Auto-generated method stub
+		return userInfoDao.countByHql("from UserInfo where userId=?", userId);
+	}
+
+	@Override
+	public List<UserInfo> queryByRoleId(long roleId) {
+		// TODO Auto-generated method stub
+		return userInfoDao.getListByHQL("from UserInfo where roleId = ?",
+				roleId);
+	}
+
+	@Override
+	public PageResults<UserInfo> findByPageAndRoleId(int startPage, long roleId) {
+		// TODO Auto-generated method stub
+		return userInfoDao.findPageByFetchedHql("from UserInfo where roleId=?",
+				"select count(*) from UserInfo where roleId=?", startPage, 10,
+				roleId);
 	}
 
 }

@@ -12,7 +12,7 @@ public interface IShipOperationService {
 	 * @param page
 	 * @return
 	 */
-	public PageResults<ShipOperation> queryOrderShipInfo(int pageNo);
+	public PageResults<ShipOperation> queryOrderShipInfoState(int pageNo, long state);
 	
 	public List<ShipOperation> queryByShipState(long shipState);
 	
@@ -52,4 +52,30 @@ public interface IShipOperationService {
 	 */
 	public ShipOperation getByCode(long shipOperationCode);
 	
+	/**
+	 * 查询预订订单是否存在
+	 * @param shipOperationCode
+	 * @return
+	 */
+	public boolean getByCodeforStateOrder(long shipOperationCode);
+	
+	/**
+	 * 查询过期未处理的订单
+	 * @return
+	 */
+	public List<ShipOperation> pastOrderShipInfo();
+	
+	/**
+	 * 查询过期已通过预订的订单
+	 * @return
+	 */
+	public List<ShipOperation> pastUseShipInfo();
+	
+	/**
+	 * 根据编号和状态查询
+	 * @param shipOperationCode
+	 * @param shipState
+	 * @return
+	 */
+	public ShipOperation queryByCodeAndState(long shipOperationCode, long shipState);
 }
