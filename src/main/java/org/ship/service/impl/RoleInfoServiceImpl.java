@@ -47,4 +47,10 @@ public class RoleInfoServiceImpl implements IRoleInfoService {
 		roleInfoDao.update(roleInfo);
 	}
 
+	@Override
+	public RoleInfo queryByName(String roleName) {
+		// TODO Auto-generated method stub
+		return roleInfoDao.getByHQL("from RoleInfo where roleName=?", roleName);
+	}
+
 }

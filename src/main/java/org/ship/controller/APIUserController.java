@@ -6,6 +6,7 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
+import org.ship.model.RoleInfo;
 import org.ship.model.UserInfo;
 import org.ship.service.IRoleInfoService;
 import org.ship.service.IUserInfoService;
@@ -22,6 +23,117 @@ public class APIUserController {
 	private IUserInfoService userInfoService;
 	@Resource
 	private IRoleInfoService roleInfoService;
+	
+	/**
+	 * 根据编号删除
+	 * @param roleId
+	 * @return result:["no data":"没有数据","success":"成功"]
+	 */
+	@RequestMapping( value = "DelRoleInfo", produces = "application/json;charset=UTF8")
+	public @ResponseBody Map<String, Object> delRoleInfo(long roleId){
+		Map<String, Object> map = new HashMap<String, Object>();
+		RoleInfo delRole = roleInfoService.getById(roleId);
+		if(delRole == null){
+			map.put("result", "no data");
+		} else {
+			roleInfoService.delete(delRole);
+			map.put("result", "success");
+		}
+		return map;
+	}
+	
+	/**
+	 * 根据编号跟新角色
+	 * @param roleInfo
+	 * @return result:["no data":"没有数据","success":"成功"]
+	 */
+	@RequestMapping( value = "UpdateRoleInfo", produces = "application/json;charset=UTF8")
+	public @ResponseBody Map<String, Object> updateRoleInfo(RoleInfo roleInfo) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		RoleInfo updateRole = roleInfoService.getById(roleInfo.getRoleId());
+		if(updateRole == null){
+			map.put("result", "no data");
+		} else {
+			updateRole.setRoleName(roleInfo.getRoleName());
+			map.put("result", "success");
+		}
+		return map;
+	}
+	
+	/**
+	 * 添加角色
+	 * @param roleName
+	 * @return result:["existing":"已存在","success":"成功"]
+	 */
+	@RequestMapping( value = "AddRoleInfo", produces = "application/json;charset=UTF8")
+	public @ResponseBody Map<String, Object> addRoleInfo(String roleName){
+		Map<String, Object> map = new HashMap<String, Object>();
+		RoleInfo roleInfo = roleInfoService.queryByName(roleName);
+		if(roleInfo != null){
+			map.put("result", "existing");
+		} else {
+			RoleInfo addRole = new RoleInfo();
+			addRole.setRoleName(roleName);
+			roleInfoService.save(addRole);
+			map.put("result", "success");
+		}
+		return map;
+	}
+	
+	/**
+	 * 根据编号查询角色信息
+	 * @param roleId
+	 * @return result:["no data":"没有数据","success":"成功"]
+	 * @retrun roleInfo:roleInfo类
+	 */
+	@RequestMapping( value = "/QueryRoleInfo", produces = "application/json;charset=UTF8")
+	public @ResponseBody Map<String, Object> queryRoleInfo(long roleId){
+		Map<String, Object> map = new HashMap<String, Object>();
+		RoleInfo roleInfo = roleInfoService.getById(roleId);
+		if(roleInfo == null){
+			map.put("result", "no data");
+		} else {
+			map.put("result", "success");
+			map.put("roleInfo", roleInfo);
+		}
+		return map;
+	}
+	
+	/**
+	 * 查看角色列表
+	 * @return result:success
+	 * @return roleInfos: roleInfo类 集合
+	 */
+	@RequestMapping( value = "QueryRoleInfoList", produces = "application/json;charset=UTF8")
+	public @ResponseBody Map<String, Object> queryRoleInfoList(){
+		Map<String, Object> map = new HashMap<String, Object>();
+		List<RoleInfo> roleInfos = roleInfoService.queryByAll();
+		map.put("result", "success");
+		map.put("roleInfos", roleInfos);
+		return map;
+	}
+	
+	/**
+	 * 用户登录验证
+	 * @param userName
+	 * @param userPwd
+	 * @return result:["no data":"没有数据","pwd error":"密码错误","success":"成功"]
+	 */
+	@RequestMapping( value = "/LoginCheck", produces = "application/json;charset=UTF8")
+	public @ResponseBody Map<String, Object> loginCheck(String userName, String userPwd){
+		Map<String, Object> map = new HashMap<String, Object>();
+		UserInfo userInfo = userInfoService.queryByUserName(userName);
+		if(userInfo == null){
+			map.put("result", "no data");
+		}else {
+			if(!userPwd.equals(userInfo.getUserPwd())){
+				map.put("result", "pwd error");
+			} else {
+				map.put("result", "success");
+			}
+		}
+		return map;
+	}
 	
 	/**
 	 * 例子:

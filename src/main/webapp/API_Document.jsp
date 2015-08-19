@@ -37,6 +37,20 @@
 				API接口文档说明 <small>API Interface Document</small>
 			</h1>
 		</div>
+		<!-- 接口调用帮助文档 -->
+		<div class="row">
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+			<div
+				class="panel panel-primary col-lg-10 col-md-10 col-sm-10 col-xs-10">
+					<div class="page-header">
+						<h3 class="panel-title">
+							<strong>调用接口帮助案例</strong>
+						</h3>
+					</div>
+					
+			</div>
+			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+		</div>
 		<!-- 游艇功能列表 -->
 		<div class="row">
 			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
@@ -105,16 +119,28 @@
 						class="list-group-item"><span class="glyphicon glyphicon-link"></span>
 						查询所有用户（分页）</a> <a href="<%=basePath%>user/QueryUserInfoList.jsp"
 						class="list-group-item"><span class="glyphicon glyphicon-link"></span>
-						查询所有用户</a>
-					<a href="<%=basePath %>user/QueryUserInfo.jsp" class="list-group-item">
-					<span class="glyphicon glyphicon-link"></span>  根据编号查询用户信息信息
-					</a>
-					<a href="<%=basePath%>user/AddUserInfo.jsp" class="list-group-item">
-					<span class="glyphicon glyphicon-link"></span>  新增用户
-					</a>	
-					<a href="<%=basePath%>user/UpdateUserInfo.jsp" class="list-group-item">
-					<span class="glyphicon glyphicon-link"></span>  根据编号修改
-					</a>
+						查询所有用户</a> <a href="<%=basePath%>user/QueryUserInfo.jsp"
+						class="list-group-item"> <span
+						class="glyphicon glyphicon-link"></span> 根据编号查询用户信息信息
+					</a> <a href="<%=basePath%>user/AddUserInfo.jsp"
+						class="list-group-item"> <span
+						class="glyphicon glyphicon-link"></span> 新增用户
+					</a> <a href="<%=basePath%>user/UpdateUserInfo.jsp"
+						class="list-group-item"> <span
+						class="glyphicon glyphicon-link"></span> 根据编号修改
+					</a> <a href="<%=basePath%>user/LoginCheck.jsp"
+						class="list-group-item"><span class="glyphicon glyphicon-link"></span>
+						用户登录验证</a> <a href="<%=basePath%>user/QueryRoleInfoList.jsp"
+						class="list-group-item"><span class="glyphicon glyphicon-link"></span>
+						查询角色信息列表</a> <a href="<%=basePath%>user/QueryRoleInfo.jsp"
+						class="list-group-item"><span class="glyphicon glyphicon-link"></span>
+						根据编号查询角色信息</a> <a href="<%=basePath%>user/AddRoleInfo.jsp"
+						class="list-group-item"><span class="glyphicon glyphicon-link"></span>
+						添加新角色</a> <a href="<%=basePath%>user/UpdateRoleInfo.jsp"
+						class="list-group-item"><span class="glyphicon glyphicon-link"></span>
+						修改角色信息</a> <a href="<%=basePath%>user/DelRoleInfo.jsp"
+						class="list-group-item"><span class="glyphicon glyphicon-link"></span>
+						删除角色信息</a>
 				</div>
 			</div>
 			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>

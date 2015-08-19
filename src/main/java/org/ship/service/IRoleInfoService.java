@@ -15,6 +15,12 @@ public interface IRoleInfoService {
 	 */
 	public RoleInfo getById(long roleId);
 	/**
+	 * 根据角色名称操作
+	 * @param roleName
+	 * @return
+	 */
+	public RoleInfo queryByName(String roleName);
+	/**
 	 * 添加角色
 	 */
 	public void save(RoleInfo roleInfo);
