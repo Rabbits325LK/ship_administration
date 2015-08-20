@@ -41,13 +41,17 @@
 		<div class="row">
 			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
 			<div
-				class="panel panel-primary col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				class="panel panel-info col-lg-10 col-md-10 col-sm-10 col-xs-10">
 					<div class="page-header">
 						<h3 class="panel-title">
 							<strong>调用接口帮助案例</strong>
 						</h3>
 					</div>
-					
+					<div class="page-body" style="margin-bottom: 2%">
+						<a href="<%=basePath %>help/javaApi.jsp" class="btn btn-success">Java 调用API 帮助文档</a>
+						<a href="javascript:void(0)" class="btn btn-primary">Swfit 调用API 帮助文档</a>
+						
+					</div>
 			</div>
 			<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
 		</div>
