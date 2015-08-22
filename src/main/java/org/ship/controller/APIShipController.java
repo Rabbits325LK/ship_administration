@@ -10,15 +10,19 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.ship.api.model.ShipInfoModel;
+import org.ship.model.Security;
 import org.ship.model.ShipInfo;
 import org.ship.model.ShipOperation;
 import org.ship.model.ShipType;
 import org.ship.model.UserInfo;
+import org.ship.service.ISecurityService;
 import org.ship.service.IShipInfoService;
 import org.ship.service.IShipOperationService;
 import org.ship.service.IShipTypeService;
 import org.ship.service.IUserInfoService;
+import org.ship.util.Base64Utils;
 import org.ship.util.PageResults;
+import org.ship.util.RSAUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -35,7 +39,20 @@ public class APIShipController {
 	private IUserInfoService userInfoService;
 	@Resource
 	private IShipOperationService shipOperationService;
-
+	@Resource
+	private ISecurityService securityService;
+	
+	@RequestMapping( value = "/RSAKey" , produces = "application/json;charset=UTF8")
+	public @ResponseBody Map<String,Object> RSAKey() throws Exception{
+		Map<String,Object> map = new HashMap<String, Object>();
+		String userName = "rabbits325";
+		Security security = securityService.queryById((long)1);
+		byte[] data = userName.getBytes();
+	    byte[] encodedData = RSAUtils.encryptByPublicKey(data, security.getPublicKey());
+		map.put("key", Base64Utils.encode(encodedData));
+		return map;
+	}
+	
 	/**
 	 * 根据编号修改船艇信息
 	 * @param shipInfo
